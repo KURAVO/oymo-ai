@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>АКЫЛМАН AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+
+            <div class="logo">
+                АКЫЛМАН <span>AI</span>
+            </div>
+
+            <div class="user-panel">
+
+                <span id="username">
+                    Пользователь
+                </span>
+
+                <button id="profileButton">
+                    Профиль
+                </button>
+
+                <button id="logoutButton">
+                    Выйти
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div class="workspace">
+
+            <aside class="sidebar">
+
+                <button id="newChatButton" class="new-chat">
+                    + Новый чат
+                </button>
+
+                <div class="history-title">
+                    История чатов
+                </div>
+
+                <div id="chatList" class="chat-list">
+                </div>
+
+            </aside>
+
+
+            <main class="chat-container">
+
+                <section class="chat" id="chat">
+                </section>
+
+
+                <form class="input-area" id="chatForm">
+
+                    <input type="file" id="fileInput" hidden>
+
+                    <button type="button" id="fileButton" title="Загрузить файл">
+                        📎
+                    </button>
+
+                    <button type="button" id="voiceButton" title="Голосовой ввод">
+                        🎤
+                    </button>
+
+                    <input type="text" id="messageInput" placeholder="Напишите сообщение..." autocomplete="off">
+
+                    <button type="submit">
+                        Отправить
+                    </button>
+
+                </form>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

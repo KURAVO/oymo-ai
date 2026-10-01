@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Вход — ОЮМО AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-box">
+
+            <div class="logo">
+                ОЮМО <span>AI</span>
+            </div>
+
+            <h1>Вход</h1>
+
+            <p>Войдите в свой аккаунт</p>
+
+            <form id="loginForm">
+
+                <input type="text" id="loginUsername" placeholder="Имя пользователя" required>
+
+                <input type="password" id="loginPassword" placeholder="Пароль" required>
+
+                <button type="submit">
+                    Войти
+                </button>
+
+            </form>
+
+            <div id="loginMessage"></div>
+
+            <p class="auth-link">
+                Нет аккаунта?
+                <a href="register.html">Создать аккаунт</a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const form =
+            document.getElementById("loginForm");
+
+
+        form.addEventListener(
+            "submit",
+            async function (event) {
+
+                event.preventDefault();
+
+                const username =
+                    document.getElementById(
+                        "loginUsername"
+                    ).value;
+
+                const password =
+                    document.getElementById(
+                        "loginPassword"
+                    ).value;
+
+                const message =
+                    document.getElementById(
+                        "loginMessage"
+                    );
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "http://127.0.0.1:8000/login",
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body: JSON.stringify({
+                                    username: username,
+                                    password: password
+                                })
+                            }
+                        );
+
+                    const data =
+                        await response.json();
+
+                    if (!response.ok) {
+
+                        message.textContent =
+                            data.detail ||
+                            "Ошибка входа";
+
+                        return;
+                    }
+
+                    localStorage.setItem(
+                        "user_id",
+                        data.user_id
+                    );
+
+                    localStorage.setItem(
+                        "access_token",
+                        data.access_token
+                    );
+
+                    window.location.href =
+                        "index.html";
+
+                } catch (error) {
+
+                    message.textContent =
+                        "Не удалось подключиться к ОЮМО AI.";
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

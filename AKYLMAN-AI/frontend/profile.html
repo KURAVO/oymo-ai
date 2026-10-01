@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Профиль — АКЫЛМАН AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+
+            <div class="logo">
+                АКЫЛМАН <span>AI</span>
+            </div>
+
+            <div class="user-panel">
+
+                <button id="backButton">
+                    Чаты
+                </button>
+
+                <button id="logoutButton">
+                    Выйти
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <main class="profile-container">
+
+            <div class="profile-box">
+
+                <h1>
+                    Профиль
+                </h1>
+
+
+                <div class="profile-info">
+
+                    <div class="profile-row">
+
+                        <span>
+                            ID пользователя
+                        </span>
+
+                        <strong id="userId">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-row">
+
+                        <span>
+                            Имя пользователя
+                        </span>
+
+                        <strong id="username">
+                            Загрузка...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-divider">
+                </div>
+
+
+                <h2>
+                    Изменить пароль
+                </h2>
+
+
+                <form id="passwordForm">
+
+                    <input type="password" id="oldPassword" placeholder="Старый пароль" required>
+
+
+                    <input type="password" id="newPassword" placeholder="Новый пароль" required>
+
+
+                    <input type="password" id="confirmPassword" placeholder="Повторите новый пароль" required>
+
+
+                    <button type="submit">
+                        Изменить пароль
+                    </button>
+
+                </form>
+
+
+                <div id="message" class="profile-message">
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090d">
+    <title>Регистрация — OYMO AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page" data-mode="register">
+    <main class="auth-shell">
+        <section class="auth-visual register-visual">
+            <a class="logo logo-large" href="register.html">
+                <span class="logo-mark">O</span>
+                <span>OYMO</span>
+                <small>AI</small>
+            </a>
+
+            <div class="visual-content">
+                <div class="eyebrow">CREATE YOUR SPACE</div>
+
+                <h1>
+                    Создайте свой<br>
+                    <span>AI-аккаунт.</span>
+                </h1>
+
+                <p>
+                    Один аккаунт для сайта, мобильного приложения
+                    и будущих сервисов OYMO.
+                </p>
+
+                <div class="feature-row">
+                    <span>01</span>
+                    <div>
+                        <strong>Личные чаты</strong>
+                        <small>История сохраняется в вашем аккаунте.</small>
+                    </div>
+                </div>
+
+                <div class="feature-row">
+                    <span>02</span>
+                    <div>
+                        <strong>Документы</strong>
+                        <small>Работа с TXT, PDF и DOCX.</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-footer">
+                OYMO · Osh, Kyrgyzstan · by Dinar
+            </div>
+        </section>
+
+        <section class="auth-panel">
+            <div class="auth-box">
+
+                <div class="mobile-brand">
+                    <a class="logo" href="register.html">
+                        <span class="logo-mark">O</span>
+                        <span>OYMO</span>
+                        <small>AI</small>
+                    </a>
+                </div>
+
+                <div class="auth-kicker">
+                    Новый аккаунт
+                </div>
+
+                <h2>
+                    Создать аккаунт
+                </h2>
+
+                <p class="auth-subtitle">
+                    После регистрации вы сразу попадёте в OYMO AI.
+                </p>
+
+                <div id="authError" class="auth-error" role="alert">
+                </div>
+
+                <form class="auth-form">
+
+                    <label class="field">
+                        <span>Имя пользователя</span>
+
+                        <input id="username" autocomplete="username" required minlength="3" maxlength="100"
+                            placeholder="Минимум 3 символа">
+                    </label>
+
+                    <label class="field">
+                        <span>Пароль</span>
+
+                        <input id="password" type="password" autocomplete="new-password" required minlength="6"
+                            placeholder="Минимум 6 символов">
+                    </label>
+
+                    <button id="submitButton" class="auth-submit" type="submit">
+                        Создать аккаунт
+                    </button>
+
+                </form>
+
+                <div class="auth-switch">
+                    Уже есть аккаунт?
+                    <a href="login.html">Войти</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>
